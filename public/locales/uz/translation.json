@@ -1,0 +1,21 @@
+{
+  "my_info": {
+    "i'm": "Men Dilshod Vohidjonov",
+    "about": "PDP Akademiyasi - Frontend kursi. Men PDP Akademiyasida Frontend Web Developer kursini tamomladim, u yerda veb-ishlab chiqishda mustahkam poydevorga ega bo'ldim. Men HTML, CSS, JavaScript va React, Node.js va Express.js kabi turli ramkalar va kutubxonalarni o'rgandim. Shuningdek, real loyihalar ustida ishlash va guruh topshiriqlarida qatnashish orqali amaliy tajriba orttirdim.",
+    "title": "Men yarim yillik tajribaga ega bo'lgan Frontend dasturchiman. Quyida mening ishlarim bilan batafsil tanishishingiz mumkin.",
+    "course": "Ta'lim",
+    "courseName": "Frontend dasturchi",
+    "work": "Mening xizmatlarim"
+  },
+  "work": {
+    "web": "Veb dasturlash",
+    "webTitle": "Veb sayt yaratish",
+    "front": "Frontend dasturlash",
+    "frontTitle": "UI yaratish",
+    "backend": "Backend dasturlash",
+    "backendTitle": "Api yaratish"
+  },
+  "technologies": {
+    "title": "Texnologiyalar"
+  }
+}

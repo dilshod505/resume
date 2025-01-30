@@ -1,0 +1,21 @@
+{
+  "my_info": {
+    "i'm": "I am Dilshod Vohidjonov",
+    "about": "PDP Academy - Frontend Course. I have completed the Frontend Web Developer course at PDP Academy, where I gained a solid foundation in web development. I learned HTML, CSS, JavaScript, and various frameworks and libraries such as React, Node.js, and Express.js. I also gained practical experience by working on real-world projects and participating in group assignments.",
+    "title": "I am a Frontend developer with half a year of experience. Below you can find more details about my work.",
+    "course": "Education",
+    "courseName": "Frontend Developer",
+    "work": "My services"
+  },
+  "work": {
+    "web": "Web Development",
+    "webTitle": "Creating websites",
+    "front": "Frontend Development",
+    "frontTitle": "Creating UI",
+    "backend": "Backend Development",
+    "backendTitle": "Creating API"
+  },
+  "technologies": {
+    "title": "Technologiies"
+  }
+}

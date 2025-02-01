@@ -4,67 +4,67 @@ const technologies = [
   {
     name: "HTML",
     description: "Standard markup language for web pages.",
-    logo: "/src/medias/html5-original.svg",
+    logo: "/public/medias/html5-original.svg",
   },
   {
     name: "CSS",
     description: "Style sheet language for designing web pages.",
-    logo: "/src/medias/css3-original.svg",
+    logo: "/public/medias/css3-original.svg",
   },
   {
     name: "SASS",
     description: "CSS preprocessor for better styling.",
-    logo: "/src/medias/sass-original.svg",
+    logo: "/public/medias/sass-original.svg",
   },
   {
     name: "Tailwind CSS",
     description: "Utility-first CSS framework.",
-    logo: "/src/medias/tailwindcss-original-wordmark.svg",
+    logo: "/public/medias/tailwindcss-original-wordmark.svg",
   },
   {
     name: "Bootstrap",
     description: "Popular CSS framework for responsive design.",
-    logo: "/src/medias/bootstrap-original.svg",
+    logo: "/public/medias/bootstrap-original.svg",
   },
   {
     name: "Ant Design",
     description: "UI framework for high-quality design.",
-    logo: "/src/medias/KDpgvguMpGfqaHPjicRK.svg",
+    logo: "/public/medias/KDpgvguMpGfqaHPjicRK.svg",
   },
   {
     name: "JavaScript",
     description: "Programming language for the web.",
-    logo: "/src/medias/javascript-original.svg",
+    logo: "/public/medias/javascript-original.svg",
   },
   {
     name: "TypeScript",
     description: "Typed superset of JavaScript.",
-    logo: "/src/medias/typescript-original.svg",
+    logo: "/public/medias/typescript-original.svg",
   },
   {
     name: "React Query",
     description: "Data-fetching library for React.",
-    logo: "/src/medias/emblem-light.svg",
+    logo: "/public/medias/emblem-light.svg",
   },
   {
     name: "MUI",
     description: "Popular React UI framework.",
-    logo: "/src/medias/materialui-original.svg",
+    logo: "/public/medias/materialui-original.svg",
   },
   {
     name: "MobX",
     description: "State management library.",
-    logo: "/src/medias/mobx.png",
+    logo: "/public/medias/mobx.png",
   },
   {
     name: "React JS",
     description: "Library for building user interfaces.",
-    logo: "/src/medias/react-original.svg",
+    logo: "/public/medias/react-original.svg",
   },
   {
     name: "Next.js",
     description: "React framework for SSR and static sites.",
-    logo: "/src/medias/nextjs-original.svg",
+    logo: "/public/medias/nest.png",
   },
 ];
 

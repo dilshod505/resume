@@ -21,7 +21,7 @@ function Main({ isDarkMode }: any) {
             </p>
           </div>
           <img
-            src="/src/medias/picture.png"
+            src="/medias/main.png"
             alt="Dilshod Vohidjonov"
             className="w-32 h-32 rounded-full object-cover"
           />
@@ -60,7 +60,7 @@ function Main({ isDarkMode }: any) {
           ))}
         </ul>
       </section>
-      <section className="mb-1 w-full max-w-3xl">
+      <section className="w-full max-w-3xl">
         <h2 className="text-3xl font-bold">{t("technologies.title")}</h2>
       </section>
     </div>

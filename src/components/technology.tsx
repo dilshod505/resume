@@ -64,7 +64,7 @@ const technologies = [
   {
     name: "Next.js",
     description: "React framework for SSR and static sites.",
-    logo: "/medias/nest.png",
+    logo: "/medias/nextjs-original.svg",
   },
 ];
 

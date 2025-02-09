@@ -17,5 +17,33 @@
   },
   "technologies": {
     "title": "Technologiies"
+  },
+  "contact": {
+    "cont": "Contact"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "gender": "Пол",
+    "phone": "Phone number",
+    "message": "Message",
+    "submit": "Sumbit"
+  },
+  "messages": {
+    "success": "Message sent successfully! 😊"
+  },
+  "rules": {
+    "name": "Please enter your name!",
+    "email": "Please enter a valid email address!",
+    "phone": "Please enter your phone number!",
+    "message": "Please enter your message!"
+  },
+  "input": {
+    "name": "Enter your name",
+    "email": "Enter your email address",
+    "male": "Male",
+    "female": "Female",
+    "phone": "Enter your phone number",
+    "message": "Enter your message"
   }
 }

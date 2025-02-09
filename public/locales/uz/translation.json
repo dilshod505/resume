@@ -17,5 +17,33 @@
   },
   "technologies": {
     "title": "Texnologiyalar"
+  },
+  "contact": {
+    "cont": "Bog'lanish"
+  },
+  "form": {
+    "name": "Ism",
+    "email": "Elektronnaya pochta",
+    "gender": "Jinsi",
+    "phone": "Telefon raqam",
+    "message": "Xabar",
+    "submit": "Jo'natish"
+  },
+  "messages": {
+    "success": "Xabar muvaffaqiyatli yuborildi! 😊"
+  },
+  "rules": {
+    "name": "Iltimos, ismingizni kiriting!",
+    "email": "Iltimos, to'g'ri e-pochta manzilini kiriting.!",
+    "phone": "Iltimos, telefon raqamingizni kiriting!",
+    "message": "Iltimos, xabaringizni kiriting!"
+  },
+  "input": {
+    "name": "Ismingizni kiriting",
+    "email": "Elektron pochta manzilingizni kiriting",
+    "male": "Erkak",
+    "female": "Ayol",
+    "phone": "Telefon raqamingizni kiriting",
+    "message": "Xabaringizni kiriting"
   }
 }

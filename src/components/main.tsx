@@ -1,3 +1,4 @@
+import { Button, Form, Input, message, Radio } from "antd";
 import { useTranslation } from "react-i18next";
 
 const technologies = [
@@ -71,13 +72,47 @@ const technologies = [
 function Main({ isDarkMode }: any) {
   const { t } = useTranslation();
 
+  const [form] = Form.useForm();
+
+  const onFinish = (values: any) => {
+    try {
+      const telegramBotToken = "7820368166:AAHg1ayijl4mdZMDyZvYm17fA04VI0sK4So";
+      const chatId = "2142298432";
+      const text = `
+New Form Submission:
+Name: ${values.name}
+Email: ${values.email}
+Gender: ${values.gender}
+Phone: ${values.phone}
+Message: ${values.message}
+      `;
+
+      const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Message sent to Telegram:", data);
+          form.resetFields();
+          message.success(t("messages.success"));
+        })
+        .catch((error) => {
+          console.error("Error sending to Telegram:", error);
+          message.error(t("messages.error"));
+        });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      message.error("An error occurred");
+    }
+  };
+
   return (
     <div
       className={`flex flex-col items-center px-5 py-28 ${
         isDarkMode ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
-      <header className="text-center mb-10" id="home">
+      <header className="text-center mb-10">
         <div className="flex items-center w-full max-w-3xl justify-between">
           <div className="text-left">
             <h1 className="text-4xl font-bold mb-3">{t("my_info.i'm")}</h1>
@@ -160,8 +195,128 @@ function Main({ isDarkMode }: any) {
           ))}
         </div>
       </section>
-      <div className="w-full max-w-3xl">
-        <h2>Contacts</h2>
+      <div className="w-full max-w-3xl mt-10">
+        <h2
+          className={`text-3xl font-bold mb-5 ${isDarkMode ? "text-white" : "text-black"}`}
+        >
+          {t("contact.cont")}
+        </h2>
+        <Form layout="vertical" onFinish={onFinish} form={form}>
+          <Form.Item
+            label={
+              <span className={isDarkMode ? "text-white" : "text-black"}>
+                {t("form.name")}
+              </span>
+            }
+            name="name"
+            rules={[{ required: true, message: t("rules.name") }]}
+          >
+            <Input
+              placeholder={t("input.name")}
+              className={
+                isDarkMode
+                  ? "bg-gray-800 text-white border-gray-700 placeholder-gray-400 focus:bg-gray-800"
+                  : ""
+              }
+            />
+          </Form.Item>
+
+          <Form.Item
+            label={
+              <span className={isDarkMode ? "text-white" : "text-black"}>
+                {t("form.email")}
+              </span>
+            }
+            name="email"
+            rules={[
+              {
+                required: true,
+                type: "email",
+                message: t("rules.email"),
+              },
+            ]}
+          >
+            <Input
+              placeholder={t("input.email")}
+              className={
+                isDarkMode
+                  ? "bg-gray-800 text-white border-gray-700 placeholder-gray-400 focus:bg-gray-800"
+                  : ""
+              }
+            />
+          </Form.Item>
+
+          <Form.Item
+            label={
+              <span className={isDarkMode ? "text-white" : "text-black"}>
+                {t("form.gender")}
+              </span>
+            }
+            name="gender"
+          >
+            <Radio.Group
+              className={
+                isDarkMode ? "text-white [&_.ant-radio-wrapper]:text-white" : ""
+              }
+            >
+              <Radio value="male">{t("input.male")}</Radio>
+              <Radio value="female">{t("input.female")}</Radio>
+            </Radio.Group>
+          </Form.Item>
+
+          <Form.Item
+            label={
+              <span className={isDarkMode ? "text-white" : "text-black"}>
+                {t("form.phone")}
+              </span>
+            }
+            name="phone"
+            rules={[{ required: true, message: t("rules.phone") }]}
+          >
+            <Input
+              placeholder={t("input.phone")}
+              className={
+                isDarkMode
+                  ? "bg-gray-800 text-white border-gray-700 placeholder-gray-400 focus:bg-gray-800"
+                  : ""
+              }
+            />
+          </Form.Item>
+
+          <Form.Item
+            label={
+              <span className={isDarkMode ? "text-white" : "text-black"}>
+                {t("form.message")}
+              </span>
+            }
+            name="message"
+            rules={[{ required: true, message: t("rules.message") }]}
+          >
+            <Input.TextArea
+              rows={4}
+              placeholder={t("input.message")}
+              className={
+                isDarkMode
+                  ? "bg-gray-800 text-white border-gray-700 placeholder-gray-400 focus:bg-gray-800"
+                  : ""
+              }
+            />
+          </Form.Item>
+
+          <Form.Item>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className={
+                isDarkMode
+                  ? "w-full xs:w-full bg-blue-600 hover:bg-blue-700"
+                  : ""
+              }
+            >
+              {t("form.submit")}
+            </Button>
+          </Form.Item>
+        </Form>
       </div>
     </div>
   );

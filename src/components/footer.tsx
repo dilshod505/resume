@@ -1,13 +1,9 @@
 import { Popover, Tooltip } from "antd";
-import {
-  HomeOutlined,
-  FileTextOutlined,
-  GithubOutlined,
-  YoutubeOutlined,
-} from "@ant-design/icons";
+import { HomeOutlined, GithubOutlined } from "@ant-design/icons";
 import { MdOutlineLightMode, MdTranslate } from "react-icons/md";
 import { useEffect } from "react";
 import i18n from "../i18n/i18n";
+import { FaTelegram } from "react-icons/fa";
 
 function Footer({ toggleMode, isDarkMode }: any) {
   useEffect(() => {
@@ -37,14 +33,22 @@ function Footer({ toggleMode, isDarkMode }: any) {
   );
 
   const icons = [
-    { icon: <HomeOutlined />, label: "Home" },
-    { icon: <FileTextOutlined />, label: "Resume" },
+    {
+      icon: <HomeOutlined />,
+      label: "Home",
+      onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }),
+    },
+    // { icon: <FileTextOutlined />, label: "Resume" },
+    {
+      icon: <FaTelegram />,
+      label: "Telegram",
+      url: "https://t.me/vohidjonovvv",
+    },
     {
       icon: <GithubOutlined />,
       label: "GitHub",
-      url: "https://github.com/dilshodvohidjonov",
+      url: "https://github.com/dilshod505",
     },
-    { icon: <YoutubeOutlined />, label: "YouTube" },
     {
       icon: (
         <Popover content={content}>
@@ -67,12 +71,23 @@ function Footer({ toggleMode, isDarkMode }: any) {
     >
       {icons.map((item, index) => (
         <Tooltip title={item.label} key={index} placement="top">
-          <button
-            onClick={item.onClick} // Faqat Light/Dark uchun ishlaydi
-            className="flex items-center justify-center w-10 h-10 text-xl rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200"
-          >
-            {item.icon}
-          </button>
+          {item.url ? (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-10 h-10 text-xl rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200"
+            >
+              {item.icon}
+            </a>
+          ) : (
+            <button
+              onClick={item.onClick} // Faqat Light/Dark uchun ishlaydi
+              className="flex items-center justify-center w-10 h-10 text-xl rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200"
+            >
+              {item.icon}
+            </button>
+          )}
         </Tooltip>
       ))}
     </div>

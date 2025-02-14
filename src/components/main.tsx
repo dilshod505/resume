@@ -82,7 +82,6 @@ function Main({ isDarkMode }: any) {
 New Form Submission:
 Name: ${values.name}
 Email: ${values.email}
-Gender: ${values.gender}
 Phone: ${values.phone}
 Message: ${values.message}
       `;
@@ -245,7 +244,6 @@ Message: ${values.message}
               }
             />
           </Form.Item>
-
 
           <Form.Item
             label={

@@ -1,4 +1,4 @@
-import { Button, Form, Input, message, Radio } from "antd";
+import { Button, Form, Input, message } from "antd";
 import { useTranslation } from "react-i18next";
 
 const technologies = [
@@ -246,23 +246,6 @@ Message: ${values.message}
             />
           </Form.Item>
 
-          <Form.Item
-            label={
-              <span className={isDarkMode ? "text-white" : "text-black"}>
-                {t("form.gender")}
-              </span>
-            }
-            name="gender"
-          >
-            <Radio.Group
-              className={
-                isDarkMode ? "text-white [&_.ant-radio-wrapper]:text-white" : ""
-              }
-            >
-              <Radio value="male">{t("input.male")}</Radio>
-              <Radio value="female">{t("input.female")}</Radio>
-            </Radio.Group>
-          </Form.Item>
 
           <Form.Item
             label={
